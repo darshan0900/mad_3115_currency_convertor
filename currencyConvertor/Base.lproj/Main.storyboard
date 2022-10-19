@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F19-Bf-YnC">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zj2-DD-P0Y">
+            <objects>
+                <viewController id="F19-Bf-YnC" customClass="ViewController" customModule="currencyConvertor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="meZ-AC-aOA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENCY CONVERTOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zam-qO-YsI">
+                                <rect key="frame" x="16" y="71" width="358" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="B1X-Bh-2fv">
+                                <rect key="frame" x="16" y="331" width="358" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.0" textAlignment="right" minimumFontSize="17" id="nIk-bm-qha">
+                                        <rect key="frame" x="16" y="3.1599443671765357" width="275.33333333333331" height="34.000000000000114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="onFirstCurrencyChanged:" destination="F19-Bf-YnC" eventType="editingChanged" id="gLX-SI-vVp"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AFg-Ma-3U7">
+                                        <rect key="frame" x="307.33333333333331" y="10.159944367176536" width="34.666666666666686" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="AFg-Ma-3U7" firstAttribute="leading" secondItem="nIk-bm-qha" secondAttribute="trailing" constant="16" id="JwS-HG-yed"/>
+                                    <constraint firstItem="nIk-bm-qha" firstAttribute="leading" secondItem="B1X-Bh-2fv" secondAttribute="leading" constant="16" id="RFU-S7-gyK"/>
+                                    <constraint firstAttribute="trailing" secondItem="AFg-Ma-3U7" secondAttribute="trailing" constant="16" id="oca-zb-BxF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="placeholderTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" id="q9x-mR-mbY">
+                                <rect key="frame" x="16" y="474" width="358" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.0" textAlignment="right" minimumFontSize="17" id="aia-fO-i7p">
+                                        <rect key="frame" x="16" y="3.1599443671765357" width="275.33333333333331" height="34.000000000000114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="onSecondCurrencyChanged:" destination="F19-Bf-YnC" eventType="editingChanged" id="y9b-Ba-yEj"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U2R-rr-5MR">
+                                        <rect key="frame" x="307.33333333333331" y="10.159944367176536" width="34.666666666666686" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aia-fO-i7p" firstAttribute="leading" secondItem="q9x-mR-mbY" secondAttribute="leading" constant="16" id="3oL-Sc-pbc"/>
+                                    <constraint firstAttribute="trailing" secondItem="U2R-rr-5MR" secondAttribute="trailing" constant="16" id="JkX-kl-Ga8"/>
+                                    <constraint firstItem="U2R-rr-5MR" firstAttribute="leading" secondItem="aia-fO-i7p" secondAttribute="trailing" constant="16" id="hfS-Gt-8Tq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="placeholderTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x4-B0-9Kr">
+                                <rect key="frame" x="175" y="402" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="swap"/>
+                                <connections>
+                                    <action selector="onSwapPress:" destination="F19-Bf-YnC" eventType="touchDown" id="SjI-nW-F81"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="35k-fc-5Ui"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zam-qO-YsI" firstAttribute="top" secondItem="35k-fc-5Ui" secondAttribute="top" constant="24" id="1nv-Ug-FIg"/>
+                            <constraint firstItem="35k-fc-5Ui" firstAttribute="trailing" secondItem="zam-qO-YsI" secondAttribute="trailing" constant="16" id="FuC-TQ-QyA"/>
+                            <constraint firstItem="B1X-Bh-2fv" firstAttribute="leading" secondItem="35k-fc-5Ui" secondAttribute="leading" constant="16" id="HJh-eQ-mNQ"/>
+                            <constraint firstItem="35k-fc-5Ui" firstAttribute="trailing" secondItem="B1X-Bh-2fv" secondAttribute="trailing" constant="16" id="UFW-i5-chU"/>
+                            <constraint firstItem="zam-qO-YsI" firstAttribute="leading" secondItem="meZ-AC-aOA" secondAttribute="leading" constant="16" id="aEe-He-MVN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="currencyLabels" destination="AFg-Ma-3U7" collectionClass="NSMutableArray" id="g8v-DA-Xqt"/>
+                        <outletCollection property="currencyLabels" destination="U2R-rr-5MR" collectionClass="NSMutableArray" id="C9W-sR-yBF"/>
+                        <outletCollection property="currencyInput" destination="nIk-bm-qha" collectionClass="NSMutableArray" id="afV-X6-VTy"/>
+                        <outletCollection property="currencyInput" destination="aia-fO-i7p" collectionClass="NSMutableArray" id="a7C-RQ-S71"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-1z-UhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252.30769230769229" y="-187.67772511848341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="swap" width="512" height="512"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
